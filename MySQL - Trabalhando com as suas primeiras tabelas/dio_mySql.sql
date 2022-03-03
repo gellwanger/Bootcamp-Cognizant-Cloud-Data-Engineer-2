@@ -14,3 +14,15 @@ CREATE TABLE pessoa (
     nascimento DATE,
     PRIMARY KEY(id)
 );
+
+INSERT INTO pessoas (nome, nascimento) VALUES ('Gustavo', '1992-02-10');
+
+SELECT * FROM pessoas;
+
+INSERT INTO pessoas (nome, nascimento) VALUES ('Franciele', '1989-12-08');
+
+SELECT * FROM pessoas;
+
+INSERT INTO pessoa (nome, nascimento) VALUES ('Gustavo', '1992-02-10');
+
+SELECT * FROM pessoa;
