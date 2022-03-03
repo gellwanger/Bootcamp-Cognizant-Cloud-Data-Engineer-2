@@ -105,3 +105,9 @@ UPDATE videos SET fk_seo=1 WHERE id_video=5;
 UPDATE videos SET fk_seo=1 WHERE id_video=6;
 
 SELECT * FROM videos;
+
+SELECT * FROM author;
+
+SELECT videos.title, author.author_name, seo.category FROM videos 
+	JOIN seo ON videos.fk_seo = seo.id_seo
+    JOIN author ON videos.author = author.id_author;
