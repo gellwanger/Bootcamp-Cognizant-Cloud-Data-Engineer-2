@@ -66,4 +66,42 @@ UPDATE videos SET author=2 WHERE id_video=2;
 
 UPDATE videos SET author=2 WHERE id_video=5;
 
+SELECT * FROM videos JOIN author ON videos.author = author.id_author;
+
+CREATE TABLE seo (
+	id_seo INT AUTO_INCREMENT,
+    category VARCHAR(20),
+    PRIMARY KEY(id_seo)
+);
+
+SELECT * FROM seo;
+
+INSERT INTO videos (author, title, likes, dislikes) VALUES (2, 'PHP', 23, 4);
+
+SELECT * FROM videos;
+
+INSERT INTO seo (category) VALUES ('Frontend');
+
+INSERT INTO seo (category) VALUES ('Backend');
+
+SELECT * FROM seo;
+
+ALTER TABLE videos ADD fk_seo INT NOT NULL;
+
+SELECT * FROM videos;
+
+UPDATE videos SET fk_seo=1 WHERE id_video=1;
+
+UPDATE videos SET fk_seo=1 WHERE id_video=1;
+
+UPDATE videos SET fk_seo=2 WHERE id_video=2;
+
+UPDATE videos SET fk_seo=2 WHERE id_video=3;
+
+UPDATE videos SET fk_seo=1 WHERE id_video=4;
+
+UPDATE videos SET fk_seo=1 WHERE id_video=5;
+
+UPDATE videos SET fk_seo=1 WHERE id_video=6;
+
 SELECT * FROM videos;
