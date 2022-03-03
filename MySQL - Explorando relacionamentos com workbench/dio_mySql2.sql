@@ -111,3 +111,19 @@ SELECT * FROM author;
 SELECT videos.title, author.author_name, seo.category FROM videos 
 	JOIN seo ON videos.fk_seo = seo.id_seo
     JOIN author ON videos.author = author.id_author;
+    
+CREATE TABLE playlist (
+	id_playlist INT AUTO_INCREMENT,
+    name_playlist VARCHAR(20),
+    PRIMARY KEY(id_playlist)
+);
+
+INSERT INTO playlist (name_playlist) VALUE ('HTML + CSS');
+
+INSERT INTO playlist (name_playlist) VALUE ('HTML + CSS+ JS');
+
+INSERT INTO playlist (name_playlist) VALUE ('Python + PHP');
+
+INSERT INTO playlist (name_playlist) VALUE ('HTML + PHP+ JS');
+
+SELECT * FROM playlist;
