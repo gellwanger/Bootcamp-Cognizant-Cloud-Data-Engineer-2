@@ -127,3 +127,21 @@ INSERT INTO playlist (name_playlist) VALUE ('Python + PHP');
 INSERT INTO playlist (name_playlist) VALUE ('HTML + PHP+ JS');
 
 SELECT * FROM playlist;
+
+CREATE TABLE videos_playlist (
+	id_vp INT AUTO_INCREMENT,
+    fk_videos INT,
+    fk_playlist INT,
+    PRIMARY KEY(id_vp)
+);
+
+INSERT INTO videos_playlist (fk_videos, fk_playlist) VALUES (2, 1);
+
+INSERT INTO videos_playlist (fk_videos, fk_playlist) VALUES (3, 1);
+
+select * from videos;
+
+SELECT playlist.name_playlist, videos.title, author.author_name FROM playlist
+	JOIN videos_playlist ON playlist.id_playlist = videos_playlist.fk_playlist
+	JOIN videos ON videos.id_video = videos_playlist.fk_videos
+    JOIN author ON videos.author = author.id_author;
