@@ -89,3 +89,8 @@ SELECT * FROM videos_canais AS vc
     RIGHT OUTER JOIN canais ON vc.fk_canal = canais.id_canal;
     
 SELECT * FROM videos;
+
+SELECT * FROM videos_canais AS vc 
+    LEFT OUTER JOIN videos ON vc.fk_video = videos.id_video
+    LEFT OUTER JOIN canais ON vc.fk_canal = canais.id_canal;
+    
